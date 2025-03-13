@@ -1,23 +1,33 @@
-import React, {useState, useEffect} from 'react';
-import {StatusBar, View, StyleSheet, Text, ActivityIndicator} from 'react-native';
-import RootNavigation from './src/navigation/RootNavigation';
-import {Amplify} from 'aws-amplify';
-import config from './src/amplifyconfiguration.json';
-import {useFonts, NunitoSans_400Regular, NunitoSans_700Bold} from '@expo-google-fonts/nunito-sans';
-import {PaperProvider} from 'react-native-paper'; // Import PaperProvider
+import React, { useState, useEffect } from "react";
+import {
+  StatusBar,
+  View,
+  StyleSheet,
+  Text,
+  ActivityIndicator,
+} from "react-native";
+import RootNavigation from "./src/navigation/RootNavigation";
+import { Amplify } from "aws-amplify";
+import config from "./src/amplifyconfiguration.json";
+import {
+  useFonts,
+  NunitoSans_400Regular,
+  NunitoSans_700Bold,
+} from "@expo-google-fonts/nunito-sans";
+import { PaperProvider } from "react-native-paper";
 
 Amplify.configure(config);
 
 const App = () => {
   let [fontsLoaded] = useFonts({
     NunitoSans_400Regular,
-    NunitoSans_700Bold
+    NunitoSans_700Bold,
   });
 
   if (!fontsLoaded) {
     return (
       <View style={styles.loadingContainer}>
-        <ActivityIndicator size='large' color='#000' />
+        <ActivityIndicator size="large" color="#000" />
         <Text>Loading...</Text>
       </View>
     );
@@ -36,13 +46,13 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center'
+    justifyContent: "center",
   },
   loadingContainer: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
 
 export default App;

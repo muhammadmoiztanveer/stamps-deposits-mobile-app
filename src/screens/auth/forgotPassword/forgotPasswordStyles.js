@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
     height: 50,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 'auto'
+    marginTop: 24
   },
   sendButtonText: {
     color: '#fff',

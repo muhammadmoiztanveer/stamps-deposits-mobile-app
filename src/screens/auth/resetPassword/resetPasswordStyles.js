@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     height: 56,
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: 'auto'
+    marginTop: 24
   },
   confirmButtonText: {color: '#fff', fontSize: 16, fontWeight: '400'}
 });

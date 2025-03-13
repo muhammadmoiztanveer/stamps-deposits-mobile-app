@@ -49,12 +49,11 @@ export default function OtpInput({length, value, onChange, hasError}) {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'between',
     gap: 12
   },
+  
   input: {
-    width: 50,
-    height: 50,
     borderWidth: 1,
     borderColor: '#C67C4E',
     borderRadius: 8,
